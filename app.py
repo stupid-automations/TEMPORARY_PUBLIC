@@ -1,13 +1,13 @@
-from flask import Flask, render_template, request
-import os
-base_dir = os.path.dirname(os.path.abspath(__file__))
-template_path = os.path.join(base_dir, "templates")
-app = Flask(__name__, template_folder=template_path)
+from flask import Flask
 
-# 3️⃣ Route to display form
+app = Flask(__name__)
+
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return "Hello Flask!"
+
+if __name__ == "__main__":
+    app.run(debug=True)
 
 
 
