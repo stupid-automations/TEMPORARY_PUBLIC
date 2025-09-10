@@ -9,8 +9,5 @@ app = Flask(__name__, template_folder=template_path)
 def home():
     return render_template("index.html")
 
-# 5️⃣ Run the app
-if __name__ == "__main__":
-    app.run(debug=True)
 
 
