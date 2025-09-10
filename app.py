@@ -1,11 +1,7 @@
 from flask import Flask, render_template, request
 import os
-
-# 1️⃣ Get absolute path for templates folder
 base_dir = os.path.dirname(os.path.abspath(__file__))
 template_path = os.path.join(base_dir, "templates")
-
-# 2️⃣ Create Flask app
 app = Flask(__name__, template_folder=template_path)
 
 # 3️⃣ Route to display form
@@ -27,3 +23,4 @@ def submit():
 # 5️⃣ Run the app
 if __name__ == "__main__":
     app.run(debug=True)
+
