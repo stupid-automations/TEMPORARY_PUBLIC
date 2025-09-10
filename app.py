@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import os
 
 # Create Flask app
-app = Flask(__name__, template_folder=template_path)
+app = Flask(__name__)
 
 # Route to display form
 @app.route("/")
@@ -22,3 +22,4 @@ def submit():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
